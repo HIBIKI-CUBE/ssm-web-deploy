@@ -17,75 +17,76 @@ type Structure<T, P> = T extends 'get'
   ? GetsType<{ id: string } & DateType & Required<P>>
   : Partial<DateType> & (T extends 'patch' ? Partial<P> : P);
 
-export type text<T='get'> = Structure<
-T,
-{
-  /**
-   * ページ名
-   */
-  title?: string
-  /**
-   * 翻訳リスト
-   */
-  dictionary: text_item[]
-}>
+export type text<T = 'get'> = Structure<
+  T,
+  {
+    /**
+     * ページ名
+     */
+    title?: string;
+    /**
+     * 翻訳リスト
+     */
+    dictionary: text_item[];
+  }
+>;
 
 interface text_item {
-  fieldId: 'item'
+  fieldId: 'item';
   /**
    * キー
    */
-  key: string
+  key: string;
   /**
    * 説明
    */
-  description?: string
+  description?: string;
   /**
    * 日本語
    */
-  ja: string
+  ja: string;
   /**
    * 英語
    */
-  en: string
+  en: string;
 }
-export type news<T='get'> = Structure<
-T,
-{
-  /**
-   * タイトル
-   */
-  title: string
-  /**
-   * 日付
-   */
-  date: string
-  /**
-   * リンク
-   */
-  link?: string
-}>
-
+export type news<T = 'get'> = Structure<
+  T,
+  {
+    /**
+     * タイトル
+     */
+    title: string;
+    /**
+     * 日付
+     */
+    date: string;
+    /**
+     * リンク
+     */
+    link?: string;
+  }
+>;
 
 export interface EndPoints {
   get: {
-    'text': text<'get'>
-    'news': news<'get'>
-  }
+    text: text<'get'>;
+    news: news<'get'>;
+  };
   gets: {
-    'text': text<'gets'>
-    'news': news<'gets'>
-  }
+    text: text<'gets'>;
+    news: news<'gets'>;
+  };
   post: {
-    'text': text<'post'>
-    'news': news<'post'>
-  }
+    text: text<'post'>;
+    news: news<'post'>;
+  };
   put: {
-    'text': text<'put'>
-    'news': news<'put'>
-  }
+    text: text<'put'>;
+    news: news<'put'>;
+  };
   patch: {
-    'text': text<'patch'>
-    'news': news<'patch'>
-  }
+    text: text<'patch'>;
+    news: news<'patch'>;
+  };
 }

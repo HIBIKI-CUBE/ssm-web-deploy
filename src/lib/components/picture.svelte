@@ -4,7 +4,7 @@
     alt = '',
     imageTypes = ['webp', 'png'],
     sizes = '',
-    sizeSet = [1500, 1250, 1000, 750, 500, 250, 200, 150, 100, 50],
+    sizeSet = [2000, 1750, 1500, 1250, 1000, 750, 500, 250],
     fallbackSize = 1000,
     directory = '/img/',
     srcName = '',
@@ -33,3 +33,8 @@
     {height}
   />
 </picture>
+
+<style lang="stylus">
+  img
+    vertical-align: bottom
+</style>

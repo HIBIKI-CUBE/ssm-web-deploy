@@ -3,6 +3,7 @@
 
   let arrow: HTMLElement;
   let angle = 0;
+  let funMode = false;
 
   function handleMouse(event: { clientX: number; clientY: number }) {
     const rect = arrow.getBoundingClientRect();
@@ -17,11 +18,11 @@
   <meta name="theme-color" content="#fff" />
 </svelte:head>
 
-<svelte:body on:mousemove={handleMouse} />
+<!-- <svelte:body on:mousemove={handleMouse} /> -->
 
 <header>
   <img class="logo" width="1572" height="600" src="ssm-logo-landscape.svg" alt="" />
-  <button>
+  <!-- <button>
     メニュー
     <div class="arrow" bind:this={arrow}>
       <svg
@@ -29,12 +30,12 @@
         viewBox="0 0 24 24"
         width="24"
         height="24"
-        style="rotate: {angle}deg"
+        style="rotate: {funMode ? angle : 45}deg"
       >
         <path d="M12 2 4.5 20.29l.71.71L12 18l6.79 3 .71-.71z" />
       </svg>
     </div>
-  </button>
+  </button> -->
 </header>
 
 <style lang="stylus">
@@ -70,7 +71,7 @@
     background-color #f7931e
     border-radius 40%
     svg
-      height 50%
+      height 60%
       fill #fff
       rotate 45deg
 </style>

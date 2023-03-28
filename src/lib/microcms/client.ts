@@ -27,10 +27,13 @@ export const getTextDictionary = async (contentId: string, queries?: MicroCMSQue
       queries,
     });
     const dictAry = res.dictionary;
-    const dict: Record<string, {
-      ja: string,
-      en: string
-    }> = {};
+    const dict: Record<
+      string,
+      {
+        ja: string;
+        en: string;
+      }
+    > = {};
     for (const item of dictAry) {
       dict[item.key] = {
         en: item.en,

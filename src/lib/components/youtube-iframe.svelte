@@ -8,7 +8,13 @@
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="youtube-wrapper {load ? 'load' : ''}" on:click={() => (load = true)}>
   <Picture imgClass="description-youtube-thumbnail" {sizes} srcName={id} width="16" height="9" />
-  <img class="play-icon" src="/img/youtube.svg" alt="YouTubeの再生ボタン" width="44" height="31" />
+  <img
+    class="play-icon"
+    src="/img/youtube-red.svg"
+    alt="YouTubeの再生ボタン"
+    width="44"
+    height="31"
+  />
   {#if load}
     <YouTube
       videoId={id}
