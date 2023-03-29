@@ -127,22 +127,22 @@
         }}
       >
         <SplideSlide>
-          <Picture imgClass="slide" srcName="magic_ss1" sizes="(max-width:900px) 80vw, 60vw" />
+          <Picture imgClass="slide" srcName="magic_ss1" sizes="(max-width:900px) 80vw, 60vw" width=16 height=9/>
         </SplideSlide>
         <SplideSlide>
-          <Picture imgClass="slide" srcName="magic_ss2" sizes="(max-width:900px) 80vw, 60vw" />
+          <Picture imgClass="slide" srcName="magic_ss2" sizes="(max-width:900px) 80vw, 60vw" width=16 height=9 />
         </SplideSlide>
         <SplideSlide>
-          <Picture imgClass="slide" srcName="magic_ss3" sizes="(max-width:900px) 80vw, 60vw" />
+          <Picture imgClass="slide" srcName="magic_ss3" sizes="(max-width:900px) 80vw, 60vw" width=16 height=9 />
         </SplideSlide>
         <SplideSlide>
-          <Picture imgClass="slide" srcName="magic_ss4" sizes="(max-width:900px) 80vw, 60vw" />
+          <Picture imgClass="slide" srcName="magic_ss4" sizes="(max-width:900px) 80vw, 60vw" width=16 height=9 />
         </SplideSlide>
         <SplideSlide>
-          <Picture imgClass="slide" srcName="magic_ss5" sizes="(max-width:900px) 80vw, 60vw" />
+          <Picture imgClass="slide" srcName="magic_ss5" sizes="(max-width:900px) 80vw, 60vw" width=16 height=9 />
         </SplideSlide>
         <SplideSlide>
-          <Picture imgClass="slide" srcName="magic_ss6" sizes="(max-width:900px) 80vw, 60vw" />
+          <Picture imgClass="slide" srcName="magic_ss6" sizes="(max-width:900px) 80vw, 60vw" width=16 height=9 />
         </SplideSlide>
       </Splide>
       <p>※画面は開発中のものです。</p>
