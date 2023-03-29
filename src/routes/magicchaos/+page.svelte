@@ -4,20 +4,12 @@
   import Button from '$lib/components/magic-button.svelte';
   import Footer from '$lib/components/footer.svelte';
   import Yframe from '$lib/components/youtube-iframe.svelte';
+  import Picture from '$lib/components/picture.svelte';
   import { onMount } from 'svelte';
-  let footerContents = {
-    copyright: ['&copy; 2022', 'HIBIKI CUBE', 'スーパースターマイン'],
-    codeLicense: {
-      license: 'mpl-2.0',
-      linkLabel: 'GitHub',
-      url: 'https://github.com/HIBIKI-CUBE/superstarmine-web',
-    },
-    assetsLicense: {
-      ccType: 'by-nd',
-    },
-  };
 
-  let loadTwitterWidget = false;
+  let loadTwitterWidget = false,
+    scroll = 0,
+    height = 0;
 
   onMount(() => {
     ((d) => {
@@ -58,7 +50,7 @@
       },
       {
         rootMargin: '50%',
-      },
+      }
     );
     twitterObserver.observe(document.querySelector('.twitter-timeline'));
   });
@@ -79,7 +71,16 @@
 
 <img src="/img/magic-bg.png" alt="" class="background" />
 <img src="/img/ssm-logo-landscape-white.svg" alt="" class="header_logo_magic" />
-<div class="wrapper">
+<svelte:window bind:scrollY={scroll} bind:innerHeight={height} />
+<div
+  class="wrapper"
+  style="-webkit-backdrop-filter:
+  blur({Math.max(Math.min(10 * ((scroll - height / 2) / (height / 4)), 10), 0)}px)
+  brightness({1 - Math.max(Math.min(0.2 * ((scroll - height / 2) / (height / 4)), 0.2), 0)});
+  backdrop-filter:
+    blur({Math.max(Math.min(10 * ((scroll - height / 2) / (height / 4)), 10), 0)}px)
+    brightness({1 - Math.max(Math.min(0.2 * ((scroll - height / 2) / (height / 4)), 0.2), 0)});"
+>
   <div class="hero">
     <div class="logo-bg" />
     <div class="characters">
@@ -92,28 +93,28 @@
   </div>
 
   <div class="dim">
-    <section>
+    <section class="dim2">
       <h1>
-        魔法少女が<wbr />マジで<wbr />激突！<br />
-        カオスな<wbr />パーティーを<wbr />はじめよう！
+        魔法少女<wbr />たちが<wbr />弾幕で<wbr />バチボコ！<br />
+        マジで<wbr />カオスな<wbr />パーティに<wbr />飛び込め！
       </h1>
     </section>
 
     <section class="youtube">
       <h2>MOVIE</h2>
       <div class="youtube-wrapper">
-        <Yframe id="foh7rj5YI_E" sizes="60vw" />
+        <Yframe id="MN_xMaBgJiM" sizes="60vw" />
       </div>
     </section>
 
-    <section>
-      <h2>PICTURES</h2>
+    <section class="splide">
+      <h2>SCREENSHOTS</h2>
       <Splide
         aria-label="スクリーンショット"
         options={{
           type: 'loop',
           focus: 'center',
-          padding: '30vw',
+          padding: '20vw',
           breakpoints: {
             900: {
               padding: '10vw',
@@ -126,41 +127,36 @@
         }}
       >
         <SplideSlide>
-          <img class="slide" data-splide-lazy="/img/magic-hero.png" alt="スクリーンショット" />
+          <Picture imgClass="slide" srcName="magic_ss1" sizes="(max-width:900px) 80vw, 60vw" />
         </SplideSlide>
         <SplideSlide>
-          <img class="slide" data-splide-lazy="/img/magic-hero.png" alt="スクリーンショット" />
+          <Picture imgClass="slide" srcName="magic_ss2" sizes="(max-width:900px) 80vw, 60vw" />
         </SplideSlide>
         <SplideSlide>
-          <img class="slide" data-splide-lazy="/img/magic-hero.png" alt="スクリーンショット" />
+          <Picture imgClass="slide" srcName="magic_ss3" sizes="(max-width:900px) 80vw, 60vw" />
         </SplideSlide>
         <SplideSlide>
-          <img class="slide" data-splide-lazy="/img/magic-hero.png" alt="スクリーンショット" />
+          <Picture imgClass="slide" srcName="magic_ss4" sizes="(max-width:900px) 80vw, 60vw" />
         </SplideSlide>
         <SplideSlide>
-          <img class="slide" data-splide-lazy="/img/magic-hero.png" alt="スクリーンショット" />
+          <Picture imgClass="slide" srcName="magic_ss5" sizes="(max-width:900px) 80vw, 60vw" />
         </SplideSlide>
         <SplideSlide>
-          <img class="slide" data-splide-lazy="/img/magic-hero.png" alt="スクリーンショット" />
-        </SplideSlide>
-        <SplideSlide>
-          <img class="slide" data-splide-lazy="/img/magic-hero.png" alt="スクリーンショット" />
-        </SplideSlide>
-        <SplideSlide>
-          <img class="slide" data-splide-lazy="/img/magic-hero.png" alt="スクリーンショット" />
+          <Picture imgClass="slide" srcName="magic_ss6" sizes="(max-width:900px) 80vw, 60vw" />
         </SplideSlide>
       </Splide>
       <p>※画面は開発中のものです。</p>
     </section>
     <section>
       <h2>STEAM</h2>
-      <p>文言ゴニョゴニョ</p>
-      <Button href="#">STEAMを見る</Button>
+      <p>今すぐウィッシュリストへ追加しよう！</p>
+      <Button href="https://store.steampowered.com/app/1785220/__MAGIC_CHAOS/">STEAMページへ</Button
+      >
     </section>
-    <section class="discord">
+    <section class="discord dim2">
       <h2>DISCORD</h2>
-      <p>公式Discordで開発の様子を覗き見しちゃおう！</p>
-      <Button href="#">
+      <p>公式Discordで、ゲーム制作や交流を一緒に楽しもう！</p>
+      <Button href="https://discord.gg/cmgUJUuKzv">
         <svg width="27" height="21" viewBox="0 0 27 21" xmlns="http://www.w3.org/2000/svg">
           <use xlink:href="/img/discord.svg#shape" />
         </svg> Discordに参加
@@ -172,7 +168,7 @@
         data-width="400"
         data-height="600"
         data-theme="light"
-        href="https://twitter.com/necromance_chan?ref_src=twsrc%5Etfw"
+        href="https://twitter.com/magicchaos_ssm"
         >ゲーム『れーぞく！ネクロマンスちゃん』公式アカウントのツイート</a
       >
       {#if loadTwitterWidget}
@@ -181,7 +177,7 @@
     </section>
 
     <div class="bottom-stick">
-      <a class="steam" href="//steam.com">
+      <a class="steam" href="https://store.steampowered.com/app/1785220/__MAGIC_CHAOS/">
         <svg
           width="65"
           height="65"
@@ -193,7 +189,7 @@
         </svg>
         <div class="theme">Steam</div>
       </a>
-      <a class="discord" href="//discord.com">
+      <a class="discord" href="https://discord.gg/cmgUJUuKzv">
         <svg
           width="27"
           height="21"
@@ -208,6 +204,7 @@
     </div>
   </div>
 </div>
+<Footer />
 
 <style lang="stylus">
 
@@ -295,10 +292,7 @@
       right: 0;
       margin auto
       bottom: 3vw
-  
-  .dim
-    background-color: #0006
-  
+
   .bottom-stick
     z-index: 9000
     position: sticky
@@ -320,6 +314,7 @@
       margin 0.5vw
       background: #000
       align-self: flex-end
+      text-decoration: none
       svg
         margin-right 1ch
         height 1.2em
@@ -374,12 +369,12 @@
   .youtube-wrapper
     border: 1vw solid #fff
 
-  .slide
-    width: 100%
-    height: auto
-
-  section.discord
-    background-color: #0006
+  .splide
+    :global(.slide)
+      width: 100%
+      height: auto
+    p
+      visibility: visible
 
   .twitter
     display:flex

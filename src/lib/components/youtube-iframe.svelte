@@ -7,7 +7,7 @@
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
 <div class="youtube-wrapper {load ? 'load' : ''}" on:click={() => (load = true)}>
-  <Picture imgClass="description-youtube-thumbnail" {sizes} srcName={id} width="16" height="9" />
+  <img class="description-youtube-thumbnail" src="http://img.youtube.com/vi/{id}/maxresdefault.jpg" width="16" height="9">
   <img
     class="play-icon"
     src="/img/youtube-red.svg"

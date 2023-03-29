@@ -1,5 +1,5 @@
 <footer>
-  <img class="logo" width="1572" height="600" src="ssm-logo-landscape-white.svg" alt="" />
+  <img class="logo" width="1572" height="600" src="/img/ssm-logo-landscape-white.svg" alt="" />
   <div class="copyright">&copy; 2023, HIBIKI CUBE, かずえもん, スーパースターマイン</div>
   <div class="license">
     <div class="codes">
