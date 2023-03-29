@@ -27,8 +27,6 @@
 
   @import '../styles/_break.styl'
 
-line
-
 .line {
   font-size: 1.125em;
   line-height: 200%;

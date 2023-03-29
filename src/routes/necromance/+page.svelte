@@ -11,7 +11,7 @@
   import TwitterSection from './components/sections/TwitterSection.svelte';
   import ShareSection from './components/sections/ShareSection.svelte';
   import Footer from './components/Footer.svelte';
- 
+
   const meta = {
     lang: 'ja',
     title: 'れーぞく！ネクロマンスちゃん - SUPER STARMINE',
@@ -34,7 +34,6 @@
   <meta property="og:image" content={meta.image} />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:site" content="@necromance_chan" />
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </svelte:head>
 
 <Nav />

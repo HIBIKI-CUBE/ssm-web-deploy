@@ -58,7 +58,7 @@
       },
       {
         rootMargin: '50%',
-      }
+      },
     );
     twitterObserver.observe(document.querySelector('.twitter-timeline'));
   });

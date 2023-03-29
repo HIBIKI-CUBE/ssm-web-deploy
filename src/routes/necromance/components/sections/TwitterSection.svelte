@@ -3,6 +3,10 @@
   import Section from '../Section.svelte';
 </script>
 
+<svelte:head>
+  <script src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</svelte:head>
+
 <Section>
   <div class="twitter-section">
     <div class="content">
@@ -11,7 +15,7 @@
         <a
           class="twitter-timeline"
           data-width="400"
-          data-height="400"
+          data-height="533"
           data-chrome="noheader nofooter noborders"
           href="https://twitter.com/necromance_chan?ref_src=twsrc%5Etfw"
           >Tweets by necromance_chan</a
@@ -33,7 +37,7 @@
 .twitter-section
   text-align center
 
-  &__widget
+  :global(.twitter-timeline)
     margin 0 auto
 
   &__followText
