@@ -77,9 +77,7 @@
       name: '十二月ねこ',
       imgId: '',
       positions: ['CGモデラー'],
-      accounts: {
-        twitter: 'https://twitter.com/Subamaru_7',
-      },
+      accounts: {},
       color: '#E82781',
     },
     {

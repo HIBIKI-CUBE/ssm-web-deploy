@@ -22,6 +22,15 @@
 <SlideHero
   items={[
     {
+      id: 'magicchaos',
+      color: '#FF00FD',
+      title: 'マジカオス',
+      subtitle: '対戦弾幕アクション',
+      description:
+        '魔法少女が闘う最大4人対戦の弾幕アクション。キャラと弾幕を組み合わせて戦略を練り、全員まるごとブッ倒せ！',
+      buttons: [{ label: 'ティザーサイトへ', url: '/magicchaos' }],
+    },
+    {
       id: 'foh7rj5YI_E',
       color: '#F7931F',
       title: 'れーぞく！ネクロマンスちゃん',
@@ -109,6 +118,8 @@
   main
     margin: 0 auto
     width 1000px
+    overflow-x hidden
+
     @media (max-width: 1111.11px)
       width 90%
   :global(body)

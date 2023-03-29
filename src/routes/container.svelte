@@ -15,6 +15,9 @@
 <style lang="stylus">
   .container
     margin-block: 5em
+    &:first-child
+      margin-top: 0
+
   h1
     margin 0 0.5ch
 

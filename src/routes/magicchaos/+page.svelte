@@ -169,7 +169,7 @@
         data-height="600"
         data-theme="light"
         href="https://twitter.com/magicchaos_ssm"
-        >ゲーム『れーぞく！ネクロマンスちゃん』公式アカウントのツイート</a
+        >弾幕バトロワ『マジカオス』公式アカウントのツイート</a
       >
       {#if loadTwitterWidget}
         <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

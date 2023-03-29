@@ -44,13 +44,27 @@
       </div>
     </div>
     <div class="accounts">
-      {#each Array(5) as _, i}
+      <!-- {#each Array(5) as _, i}
         <a href={accounts[Object.keys(accounts)[i]]} class="account {Object.keys(accounts)[i]}">
           {#if Object.keys(accounts)[i]}
             <img class="icon" src="/img/{Object.keys(accounts)[i]}.svg" alt="" />
           {/if}
         </a>
+      {/each} -->
+      {#each Object.keys(accounts) as service}
+        <a href={accounts[service]} class="account {service}">
+          {#if service}
+            <img class="icon" src="/img/{service}.svg" alt="" />
+          {/if}
+        </a>
       {/each}
+      <!-- {#each accounts as account}
+        <a href={account} class="account {account}">
+          {#if account}
+            <img class="icon" src="/img/{account}.svg" alt="" />
+          {/if}
+        </a>
+      {/each} -->
     </div>
   </div>
 </div>

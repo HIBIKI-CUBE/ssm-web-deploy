@@ -16,7 +16,7 @@
 
 <Container title="NEWS" subtitle="お知らせ" themeColor="#f00">
   {#each showAllNews ? data.news : data.news.slice(0, 3) as entry, i}
-    <Entry {...entry} index={i - 3} />
+    <Entry {...entry} index={i - 3} entriesCount={data.news.length - 3}/>
   {/each}
   <div class="showMore">
     <button on:click={() => (showAllNews = !showAllNews)}>

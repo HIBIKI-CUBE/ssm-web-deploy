@@ -6,13 +6,14 @@
   export let title = '',
     date = '',
     link = '#000',
-    index = 0;
+    index = 0,
+    entriesCount = 0;
 </script>
 
 <a href={link}>
   <article
     in:fly={{ x: 200, duration: 500, delay: 50 * index, easing: expoOut }}
-    out:fly={{ x: 500, duration: 200, delay: 20 * index, easing: expoOut }}
+    out:fly={{ x: 500, duration: 200, delay: 20 * -(index - (entriesCount)), easing: expoOut }}
   >
     {title}
     <time dateTime={cdate(date).format('YYYY-MM-DD')}>{cdate(date).format('YYYY/M/D')}</time>

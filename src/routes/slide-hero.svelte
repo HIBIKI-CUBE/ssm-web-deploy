@@ -67,6 +67,8 @@
     aspect-ratio 2/1
     @media (max-width: 1111px)
       aspect-ratio 16/9
+    @media (max-width: 650px)
+      aspect-ratio 4/5
     :global(img)
       width 100%
       height 100%
@@ -78,6 +80,8 @@
     width 100%
     height 100%
     padding 5%
+    @media (max-width: 650px)
+      padding-bottom 2.5em
     box-sizing border-box
     display flex
     flex-direction column
@@ -91,17 +95,17 @@
     background: var(--color)
     margin: 0.25em 0
     display inline-block
-  
+
   .title
     font-size: 3em
     @media (max-width: 1111px)
       font-size: 1.8em
-  
+
   .subtitle
     font-size: 1.5em
     @media (max-width: 1111px)
       font-size: 0.9em
-  
+
   .description
     width: 50%
     @media (max-width: 1111px)
