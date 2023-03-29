@@ -1,6 +1,17 @@
 <script>
   import Nav from './components/Nav.svelte';
   import Line from './components/Line.svelte';
+  import HeroSection from './components/sections/HeroSection.svelte';
+  import MovieSection from './components/sections/MovieSection.svelte';
+  import NewsSection from './components/sections/NewsSection.svelte';
+  import WorldSection from './components/sections/WorldSection.svelte';
+  import CharactersSection from './components/sections/CharactersSection.svelte';
+  import SystemSection from './components/sections/SystemSection.svelte';
+  import DiscordSection from './components/sections/DiscordSection.svelte';
+  import TwitterSection from './components/sections/TwitterSection.svelte';
+  import ShareSection from './components/sections/ShareSection.svelte';
+  import Footer from './components/Footer.svelte';
+ 
   const meta = {
     lang: 'ja',
     title: 'れーぞく！ネクロマンスちゃん - SUPER STARMINE',
@@ -27,3 +38,35 @@
 </svelte:head>
 
 <Nav />
+<HeroSection />
+<main class="main">
+  <MovieSection />
+  <NewsSection />
+  <WorldSection />
+  <CharactersSection />
+  <SystemSection />
+  <DiscordSection />
+  <TwitterSection />
+</main>
+<ShareSection />
+<Footer />
+
+<style lang="stylus">
+@import './styles/_break.styl'
+@import './styles/_layouts.styl'
+@import './styles/_typography.styl'
+
+:global(html)
+	width: 100%;
+	font-size: 16px;
+	+sm() {
+		font-size: 14px;
+	}
+	font-family: 'Noto Sans JP', sans-serif;
+	color: #333;
+
+:global(body)
+	background: url('./img/20210827_bg.png'), #56449a;
+	background-repeat: repeat;
+	font-family: 'Noto Sans JP', sans-serif;
+</style>

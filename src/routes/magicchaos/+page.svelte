@@ -58,7 +58,7 @@
       },
       {
         rootMargin: '50%',
-      },
+      }
     );
     twitterObserver.observe(document.querySelector('.twitter-timeline'));
   });
@@ -210,6 +210,11 @@
 </div>
 
 <style lang="stylus">
+
+  :global(html,body)
+    width: 100%
+    height: 100%
+    margin: 0
 
   .logo-bg
     background: #0009
