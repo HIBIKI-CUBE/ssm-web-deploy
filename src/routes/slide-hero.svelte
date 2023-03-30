@@ -41,7 +41,7 @@
                   {/each}
                 </div>
               </div>
-              <Picture srcName={item.id} />
+              <Picture srcName={item.id} sizes='100vw'/>
             </div>
           </SplideSlide>
         {/each}

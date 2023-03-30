@@ -36,36 +36,59 @@
   <meta name="twitter:site" content="@necromance_chan" />
 </svelte:head>
 
-<Nav />
-<HeroSection />
-<main class="main">
-  <MovieSection />
-  <NewsSection />
-  <WorldSection />
-  <CharactersSection />
-  <SystemSection />
-  <DiscordSection />
-  <TwitterSection />
-</main>
-<ShareSection />
-<Footer />
+<div class="necromance-wrapper">
+  <Nav />
+  <HeroSection />
+  <main class="main">
+    <MovieSection />
+    <NewsSection />
+    <WorldSection />
+    <CharactersSection />
+    <SystemSection />
+    <DiscordSection />
+    <TwitterSection />
+  </main>
+  <ShareSection />
+  <Footer />
+</div>
 
 <style lang="stylus">
-@import './styles/_break.styl'
-@import './styles/_layouts.styl'
-@import './styles/_typography.styl'
+  @import './styles/_break.styl'
+  @import './styles/_layouts.styl'
+  @import './styles/_typography.styl'
 
-:global(html)
-	width: 100%;
-	font-size: 16px;
-	+sm() {
-		font-size: 14px;
-	}
-	font-family: 'Noto Sans JP', sans-serif;
-	color: #333;
+  .necromance-wrapper
+    width: 100%;
+    font-size: 16px;
+    +sm() {
+      font-size: 14px;
+    }
+    color: #333;
+    background: url('./img/20210827_bg.png'), #56449a;
+    background-repeat: repeat;
+    font-family: 'Noto Sans JP', sans-serif;
+    position: absolute
+    z-index: 0
+  /*** The new CSS Reset - version 1.0.0 (last updated 8.7.2021) ***/
 
-:global(body)
-	background: url('./img/20210827_bg.png'), #56449a;
-	background-repeat: repeat;
-	font-family: 'Noto Sans JP', sans-serif;
+  /* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+  :global(.necromance-wrapper *:where(:not(iframe, canvas, img, svg, video):not(svg *)))
+    all unset
+    display revert
+
+  /* Preferred box-sizing value */
+  :global(.necromance-wrapper *, .necromance-wrapper *::before, .necromance-wrapper *::after)
+    box-sizing border-box
+
+  /* Remove list styles (bullets/numbers) */
+  :global(.necromance-wrapper ol,.wrapper.necromance-wrapper ul)
+    list-style none
+
+  /* For images to not be able to exceed their container */
+  :global(.necromance-wrapper img)
+    max-width 100%
+
+  /* removes spacing between cells in tables */
+  :global(.necromance-wrapper table)
+    border-collapse collapse
 </style>
