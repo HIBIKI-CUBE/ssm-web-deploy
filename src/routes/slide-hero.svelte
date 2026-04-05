@@ -34,7 +34,15 @@
               <div class="content">
                 <h3 class="subtitle">{item.subtitle}</h3>
                 <h2 class="title">{item.title}</h2>
-                <div class="description">{item.description}</div>
+                <div class="description">
+                  {#if Array.isArray(item.description)}
+                    {#each item.description as line}
+                      <p>{line}</p>
+                    {/each}
+                  {:else}
+                    {item.description}
+                  {/if}
+                </div>
                 <div class="buttons">
                   {#each item.buttons as button}
                     <Button href={button.url} color="#0A6AFA">{button.label}</Button>
