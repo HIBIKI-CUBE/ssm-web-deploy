@@ -22,6 +22,15 @@
 <SlideHero
   items={[
     {
+      id: 'the_spinner',
+      color: '#464646',
+      title: 'THE SPINNER',
+      subtitle: '回転スマッシュホッケーゲーム',
+      description:
+        'ステージ端でワープするパックを回転ラケット（＝スピナー）で打ち出す、新感覚のエアホッケーゲーム。相手のコアにパックを叩き込んで勝利を目指せ！オフライン/オンライン両対応！',
+      buttons: [],
+    },
+    {
       id: 'magicchaos',
       color: '#FF00FD',
       title: 'マジカオス',
@@ -38,20 +47,6 @@
       description:
         'スーパースターマイン第一作目のSTG。敵弾をスレスレでかわすことで強大な必殺技をブッ放せる『れーぞくシステム』を搭載。リスクとリターンの取捨選択に手に汗握る、白熱したバトルを楽しめる。',
       buttons: [{ label: 'ティザーサイトへ', url: '/necromance' }],
-    },
-    {
-      id: 'spinner_ss',
-      color: '#464646',
-      title: 'SPINNER',
-      subtitle: '新感覚ホッケーアクションゲーム',
-      description:
-        'ハンドルコントローラーを用いて戦う1vs1のホッケーゲーム。ゴールがなく、パックが端のラインを超えると対となるラインにワープするという仕様が特徴。',
-      buttons: [
-        {
-          label: '紹介記事を読む',
-          url: 'https://game.creators-guild.com/g4c/%e3%82%b2%e3%83%bc%e3%83%a0%e6%a5%ad%e7%95%8c%e4%ba%a4%e6%b5%81%e4%bc%9a%e3%81%ab%e6%bd%9c%e5%85%a5%ef%bc%81/',
-        },
-      ],
     },
     {
       id: 'cup-run_ss',
