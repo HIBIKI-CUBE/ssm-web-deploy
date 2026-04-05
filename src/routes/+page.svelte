@@ -23,7 +23,7 @@
   items={[
     {
       id: 'the_spinner',
-      color: '#464646',
+      color: '#47f1ac5',
       title: 'THE SPINNER',
       subtitle: '回転スマッシュホッケーゲーム',
       description: [
